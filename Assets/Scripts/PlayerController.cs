@@ -34,5 +34,6 @@ public class PlayerController : MonoBehaviour
         rotationY = Mathf.Clamp(rotationY, -80, 80);
         if (rotationY < 0) rotationY += 360;
         mainCamera.transform.localEulerAngles = new Vector3(rotationY, mainCamera.transform.localEulerAngles.y, 0);
+        currentSpeed = stats.speed;
     }
 }
